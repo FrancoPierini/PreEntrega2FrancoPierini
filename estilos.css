@@ -11,48 +11,45 @@ body.html
 
 }
 
-.container
-{
-    
-    display: grid;
-    grid-template-areas: 
-                        'cabecera cabecera cabecera'
-                        'linea linea linea'
-                        'tarj1 tarj2 tarj3'
-                        'pie pie pie';
-    grid-template-rows: 1fr 0,20fr 2fr 1fr;
-    grid-template-columns: auto auto auto;
-    
-
-
-}
 
 /*Header*/
 
-.titulo
+header
 {
     width: 100%;
-    grid-area: cabecera;
+    height: 20%;
     background-color: black;
     color: aliceblue;
     text-align: center;
     border-radius: 10px;
     padding: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    animation-name: animacionfondotitulo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
-.titulo p
+
+header p
 {
     color:aquamarine;
     font-size: smaller;
     font-weight: bold;
-    
 }
+
 nav
 {
-    grid-area: linea;
+    
     background-color: dimgray;
     color: aliceblue;
     border-radius: 10px;
     width: 100%;
+    height: 10%;
+    transform: scale(1);
+    animation: animacionnav;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
 
 }
 
@@ -82,29 +79,46 @@ nav a:hover
 {
     text-transform: uppercase;
     color: aqua;
+    height: 10px;
+    transform: scale(1.5);
 }
 
-
-button
+main
 {
-    border-radius: 10px;
-    background-color: aqua;
-    font-weight: bold;
-    position: relative;
-
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    grid-area: tarj1 tarj2 tarj3;
+    flex-wrap: auto;
+    height: auto;
+    overflow:visible;
+    
+    
 }
+
+section
+{
+    width: auto;
+}
+
+
+
 .c1
 {
-    grid-area: tarj1;
+    display: flex;
+    flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
+    
 }
 .c1:hover 
 {
-    background-color: blueviolet;
+    background-color: gray;
+    color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
+    
 }
 
 .c1 img
@@ -116,16 +130,19 @@ button
 
 .c2
 {
-    grid-area: tarj2;
+    display: flex;
+    flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
 }
 .c2:hover 
 {
-    background-color: blueviolet;
+    background-color: black;
+    color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
+    
 }
 .c2 img
 {
@@ -136,14 +153,16 @@ button
 
 .c3
 {
-    grid-area: tarj3;
+    display: flex;
+    flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
 }
 .c3:hover 
 {
-    background-color: blueviolet;
+    background-color: gray;
+    color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
 }
@@ -162,9 +181,9 @@ h2
 
 }
 
-.pie
+footer
 {
-    grid-area: pie;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,86 +199,29 @@ h2
 
 /*Comienzo estilos pagina2*/
 
-.contenedor2
-{
-    height: 100%;
-    width:100%;
-    display: grid;
-    margin: 0 auto;
-    grid-template-areas: 'cabecera cabecera'
-                        ' linea linea'
-                        'prin secu'
-                        'pie pie';
-    grid-template-rows: 2fr 0,25fr 4fr 1fr;
-    grid-template-columns: 1fr 1fr;
-}
 
-
-
-.caja1
-{
-    
-    grid-area: prin;
-    padding: 10;
-    gap: 10px;
-    margin: 2;
-    
-}
-.caja1 img
-{
-    width: 100%;
-    height: 275px;
-    border-radius: 10px;
-}
-
-.caja1:hover
-{
-    background-color:rgb(232, 14, 170) ;
-    font-weight: bold;
-    color: antiquewhite;
-    border-radius: 10px;
-    
-}
-
-.caja2
-{
-    
-    grid-area: secu;
-    padding: 10;
-    gap: 10px;
-    margin: 2;
-
-}
-.caja2 img
-{
-    width: 100%;
-    height: 275px;
-    border-radius: 10px;
-    
-}
-.caja2:hover
-{
-    background-color: rgb(67, 202, 235);
-    font-weight: bold;
-    color: antiquewhite;
-    border-radius: 10px;
-}
 
 .iconos
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0 100px;
     gap: 80px;
 
 }
 
-.iconos img
+.iconos a
 {
     height: 50px;
     width: 50px;
-    
+    display: flex;
+    justify-content: center;
+    transform: scale(1);
+}
+
+.iconos a:hover
+{
+    transform: scale(1.2);
 }
 
 /* FIN ESTILOS HTML*/ 
@@ -268,34 +230,62 @@ h2
 
 @media only screen and (max-width:480px) 
 {
-    .container
-        {
-            display: grid;
-            grid-template-areas: 
-                                'cabecera'
-                                'linea'
-                                'tarj1' 
-                                'tarj2'
-                                'tarj3'
-                                'pie';
-            grid-template-rows: 1fr 1fr 1r 1fr 1fr 1fr;
-            grid-template-columns: auto;
-            font-size: small;
-        }
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    nav
+    {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+
     
-    .contenedor2
-        {   display: grid;
-            grid-template-areas: 
-                                'cabecera'
-                                'linea'
-                                'prin'
-                                'secu'
-                                'pie';
-            grid-template-rows: 1fr 0,2fr 1fr 1fr 0,2fr;
-            grid-template-columns: auto;
-            font-size: small;
-            
+    main 
+        {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+    footer 
+        {
+            display: flex;  
+            flex-direction: column;
+            height: auto;
+
         }
 
     }
 
+/*ANIMACIONES*/
+
+
+@keyframes animacionfondotitulo
+{
+    0%,100%
+    {
+        background-color: black;
+    }
+    50%
+    {
+        background-color: dimgray;
+    }
+}
+@keyframes animacionnav
+{
+    0%,100%
+    {
+        background-color: dimgray;
+    }
+    50%
+    {
+        background-color: black;
+    }
+}
