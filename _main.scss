@@ -20,11 +20,13 @@ section
 
 .c1
 {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
+    transform: scale(1);
     
 }
 .c1:hover 
@@ -33,6 +35,8 @@ section
     color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
+    transform: scale(1.05);
+
     
 }
 
@@ -45,11 +49,13 @@ section
 
 .c2
 {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
+    transform: scale(1);
 }
 .c2:hover 
 {
@@ -57,7 +63,7 @@ section
     color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
-    
+    transform: scale(1.05);
 }
 .c2 img
 {
@@ -68,11 +74,13 @@ section
 
 .c3
 {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     padding: 10;
     gap: 10px;
     margin: 2;
+    transform: scale(1);
 }
 .c3:hover 
 {
@@ -80,6 +88,7 @@ section
     color: aliceblue;
     font-weight: bold;
     border-radius: 10px;
+    transform: scale(1.05);
 }
 .c3 iframe
 {

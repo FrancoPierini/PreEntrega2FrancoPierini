@@ -1,0 +1,63 @@
+/* COMIENZO MEDIA QUERYS VERSION MOBILE*/
+
+@media only screen and (max-width:480px) 
+{
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    nav
+    {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    
+    main 
+        {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+    footer 
+        {
+            display: flex;  
+            flex-direction: column;
+            height: auto;
+
+        }
+
+    }
+
+/*ANIMACIONES*/
+
+
+@keyframes animacionfondotitulo
+{
+    0%,100%
+    {
+        background-color: black;
+    }
+    50%
+    {
+        background-color: dimgray;
+    }
+}
+@keyframes animacionnav
+{
+    0%,100%
+    {
+        background-color: dimgray;
+    }
+    50%
+    {
+        background-color: black;
+    }
+}
